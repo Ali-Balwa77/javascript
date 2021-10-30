@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <img  id="demo1" src="ani5.jpg" style="height: 160px; width: 160px;">
+        <p id="demo2" style="padding: 20px">Hello World</p>
+    </div>
+    <button onclick="hide()" style="margin-top: 5px;">Hide</button>
+    <button onclick="show()" style="margin-top: 5px;">Show</button>
+    <button onclick="change()"style="margin-top: 5px;">Change</button>
+
+    
+    <script>
+        function hide(){
+            document.getElementById('demo').style.display="none";
+        }
+        function show(){
+            document.getElementById('demo').style.display="block";
+        }
+        var img = document.getElementById('demo1');
+    
+        function change(){
+            img.setAttribute('src','any3.jpg');
+            document.getElementById('demo2').innerHTML='Hello';   
+        }
+
+        var h = document.getElementById('demo2');
+
+        h.style.fontSize='18px';
+        h.style.background='green';
+        h.style.textDecoration='yellow underline overline wavy';
+    </script>
+
+
+</body>
+</html>

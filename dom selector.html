@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="demo">sadfsd</h3>
+    <p id="demo1">dwsffs</p>
+
+    <script>
+         document.getElementById('demo1').innerHTML = 'hello world';
+        var element = document.getElementsByClassName('demo');
+        var element = document.getElementsByTagName('p');
+        var element = document.querySelectorAll('.demo');                                   
+        for (let i = 0; i < element.length; i++) { 
+            element[i].style.color= 'green';
+        }
+        console.log(element);
+    </script>
+
+    <!--sekelct element bt name -->
+
+    <label>firstname: <input type="text" name="firstname"></label><br><br>
+    <label>lastname: <input type="text" name="lastname"></label><br><br>
+    <input type="submit" onclick="myfun()">
+
+    <script>
+        function myfun(){
+            var firstname = document.getElementsByName('firstname')[0].value;
+            console.log(firstname);
+            var lastname = document.getElementsByName('lastname')[0].value;
+            console.log(lastname);
+            var fullname = 'Your fullname is '+firstname+' '+lastname;
+            console.log(fullname);
+            alert(fullname);
+        }
+      
+    </script>
+</body>
+</html>

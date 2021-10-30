@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #container {
+       height: 200px;
+       width: 200px;
+       background-color: yellowgreen;
+       position: absolute;
+       margin-top: 5px;
+    }
+    #animation{
+        height: 30px;
+        width: 30px;
+        background-color: rgb(255, 38, 0); 
+        position: relative; 
+    }
+    </style>
+</head>
+<body>   
+    <button onclick="myfun()">click me</button>   
+    <div id="container">
+        <div id="animation"></div>
+    </div>
+    
+
+    <script>
+       function myfun(){
+            var id=null;
+            var element=document.getElementById('animation');
+            var pop=0;
+            clearInterval(id);
+            id=setInterval(animate,50);
+             
+            function animate(){
+                if (pop == 170) {
+                    clearInterval(id);
+                }else{
+                    pop++;
+                    element.style.top = pop + 'px';
+                    element.style.left = pop + 'px';
+                }
+            }
+        }    
+    </script>
+</body>
+</html>

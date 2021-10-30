@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fun()">click me</button>
+    <p id="demo"></p>
+    <script>
+        function fun(){ 
+            //    alert-box
+            alert('Hello world!');     
+            //    comfirm-box
+            var txt;       
+            if (confirm('press button')) {
+                txt = 'ok button';
+            }else{
+                txt = 'cancle button';
+            }
+            document.getElementById('demo').innerHTML = txt;  
+            //     prompt-box
+            var person = prompt('write the message?','');
+            var txt;
+            if (person == 'null' || person == '') {
+                txt = 'cancle button';
+            }else{
+                txt = 'Hello ' + person + ' How are you.';
+            }
+            document.getElementById('demo').innerHTML = txt; 
+        }
+    </script>
+</body>
+</html>

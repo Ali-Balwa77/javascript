@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- json  to javascript object convert -->
+    <p id="demo"></p>
+    <script>
+        var text = '{"employee":['+
+            '{"firstname":"Akbar","lastname":"Abbas"},'+
+            '{"firstname":"Kurban","lastname":"Sheliya"},'+
+            '{"firstname":"Mahedi","lastname":"Ali"}]}';
+
+        var obj = JSON.parse(text);
+        document.getElementById('demo').innerHTML=obj.employee[1].firstname+ ' '+obj.employee[1].lastname;
+        console.log(text);    
+    </script>
+
+    <!--javascript objaect to json convert  -->
+    <p id="demo"></p>
+    <script>
+        var obj = {'employee':[
+            {'firstname':"Akbar",'lastname':"Abbas"},
+            {'firstname':"Kurban",'lastname':"Sheliya"},
+            {'firstname':"Mahedi",'lastname':"Ali"}]};
+
+        var text = JSON.stringify(obj);
+        document.getElementById('demo').innerHTML=obj.employee[0].firstname+' '+obj.employee[0].lastname;
+        console.log(obj);    
+    </script>
+
+</body>
+</html>

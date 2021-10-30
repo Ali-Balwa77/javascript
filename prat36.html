@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>fruits
+    <select id="fruits" onchange="price()">
+        <option value="Apple">Apple</option>
+        <option value="Banana">Banana</option>
+        <option value="Orange">Orange</option>
+        <option value="Mango">Mango</option>
+        <option value="Kewi">Kewi</option>
+        <option value="Cherry">Cherry</option>
+    </select>
+    </label>
+
+    <p id="demo" style="color:tomato;"></p>
+
+    <script>
+        function price(){
+            var fruit = document.getElementById('fruits').value;
+            switch (fruit) {
+                case 'Apple':
+                    var amount = '140rs.'
+                    document.getElementById('demo').innerHTML = 'The price of' +' ' +'<b>'+fruit+'</b>' +' '+ 'is' +' '+'<b>'+ amount+'</b>';
+                    break;
+            
+                case 'Banana':
+                    var amount = '100rs.'
+                    document.getElementById('demo').innerHTML = 'The price of' +' '+'<b>'+fruit+'</b>' +' '+ 'is' +' '+'<b>'+ amount+'</b>';
+                    break;    
+
+                case 'Mango':
+                    var amount = '150rs.'
+                    document.getElementById('demo').innerHTML = 'The price of' + ' '+'<b>'+ fruit+'</b>' +' '+ 'is' +' '+ '<b>'+amount+'</b>';
+                    break; 
+                    
+                case 'Orange':
+                    var amount = '120rs.'
+                    document.getElementById('demo').innerHTML = 'The price of' +' '+'<b>'+ fruit+ '</b>'+' '+ 'is' +' ' +'<b>'+amount+'</b>';
+                    break;  
+
+                default:
+                document.getElementById('demo').innerHTML = 'Sorry for the inconveniences,' +' '+'<b>'+fruit +'</b>'+' '+ 'is currently not available.';      
+            }
+        }
+        console.log('fruit');
+    </script>
+</body>
+</html>

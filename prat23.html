@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demp"></p>
+    <p id="demo"></p>
+
+    <script>
+        const name=['Akbar','Abbas','Migdad','Ali','Balwa'];
+        name.pop();
+        name.push('Balwa');
+        name.shift();
+        name.unshift('fgffgf');
+        let lastname = name[name.length-5];
+         var type=typeof name;
+        
+        for (let i = 0; i < name.length; i++) {
+            document.getElementById("demp").innerHTML += name[i]+' ';
+            document.getElementById('demo').innerHTML = lastname +'<br>'+name.length + type ;
+            console.log(lastname);
+            console.log(name);
+        }  
+    </script>
+</body>
+</html>

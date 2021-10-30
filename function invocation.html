@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- invoking function with default perameter -->
+    <button onclick="myfunction()">click me</button>
+    <script>
+        function myfunction(message='hello world'){
+            alert(message);
+        }
+    </script>
+
+    <!-- invoking function with globle object -->
+    <p id="demo"></p>
+
+    <script>
+        function myfun(a,b){
+            return a+b;
+        }
+        document.getElementById('demo').innerHTML = 
+        window.myfun(20,23);
+    </script>
+
+    <!-- invoking function in an object -->
+
+    <p id="demo"></p>
+
+    <script>
+        var fruit = {
+            name: 'mango',
+            color: 'yellow',
+            showInfo: function(){
+                return 'The '+ this.name+ ' is '+ this.color;
+            }
+        };
+        document.getElementById('demo').innerHTML=
+        fruit.showInfo();
+        console.log(fruit);
+    </script>
+</body>
+</html>

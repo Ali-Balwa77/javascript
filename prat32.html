@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <select> tag -->
+    <!-- <label style="text-transform: capitalize;">choise you name</label>
+    <select name="name" id="name">
+        <option value="Akbar">Akbar</option>
+        <option value="Abbas">Abbas</option>
+        <option value="Migdad">Migdad</option>
+        <option value="Ali">Ali</option>
+        <option value="Balwa">Balwa</option>
+    </select>
+    <h3>Select your Name: <span id="demo"></span> </h3>
+
+    <script>
+        var select=document.getElementById('name');
+
+        select.addEventListener('change',function(){
+             var val = document.getElementById('name').value;
+             document.getElementById('demo').innerHTML=val;
+        });
+        console.log(select);
+    </script>
+
+    <input> tag -->
+
+    <!-- <input type="text" id="input" name="massage">
+    <input type="submit" value="submit">
+    <h3 id="result"></h3>
+
+    <script>
+        let input = document.getElementById('input');
+        let result = document.getElementById('result');
+
+        input.addEventListener('change',function myfunction(){
+            result.textContent = this.value;
+            console.log(input);
+        });
+    </script> -->
+
+    <!-- textarea -->
+
+    <textarea id="text"></textarea>
+    <p>The Value is: <span id="demo"></span></p>
+    <p> click <b>text</b> click outside</p>
+
+    <script>
+        var area = document.getElementById('text');
+
+        area.addEventListener('focus',function myfun(){
+            document.getElementById('demo').innerHTML = area;
+            area.style.background='yellow';
+        });
+        area.addEventListener('blur',function myfun(){
+            area.style.background='red';
+        });
+        console.log(area);
+    </script>
+</body>
+</html>

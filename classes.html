@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- static method -->
+    <p id="demo"></p>
+    <script>
+        class name{
+            constructor(firstname,lastname){
+                this.fname=firstname;
+                this.lname=lastname;
+            }
+            static myfun(hello){
+                return hello;
+            }
+        }
+        document.getElementById('demo').innerHTML=name.myfun('hello world');
+    </script>
+
+    <!-- class declare -->
+    <p id="demo"></p>
+    <script>
+        class fruits{
+            constructor(fruitname){
+                this.name=fruitname;
+            }
+        }
+        var fruit = new fruits('mango');
+        document.getElementById('demo').innerHTML=fruit.name;
+    </script>
+
+    <!-- calss method showInfo() -->
+    <p id="demo"></p>
+    <script>
+        class Fruits{
+            constructor(fruitname,fruitcolor){
+                this.name=fruitname;
+                this.color=fruitcolor;
+                this.taste='sweet';
+            }
+            showInfo(){
+                document.getElementById('demo').innerHTML = ' The '+ this.name+ ' is '+ this.color+ ' and '+this.taste;
+            }
+        }
+        var fruit = new Fruits('mango','yellow');
+        fruit.showInfo();
+    </script>   
+
+    <!-- class inheritance -->
+
+    <p id="demo"></p>
+
+    <script>
+        class car{
+            constructor(brand){
+                this.carname=brand;
+            }
+            present(){
+                return ' I have a '+this.carname;
+            }
+ 
+        }
+        class model extends car{
+            constructor(brand,mod){
+                 super(brand);
+                 this.carmodel=mod;   
+            }
+            show(){
+                return this.present()+ ', it is a '+this.carmodel;
+            }
+        }
+        let mycar = new model('Ford','Mustang')
+        document.getElementById('demo').innerHTML = mycar.show();
+    </script>
+</body>
+</html>

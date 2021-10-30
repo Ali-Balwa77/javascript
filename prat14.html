@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="demo"></h2>
+
+    <input type="text" class="first_value" id='dd' placeholder="first value">
+    <input type="text" class="second_value" placeholder="second value">
+    <input type="submit" class="submit" onclick="my_function()">
+    <script>
+        function my_function(){
+            var first_value = document.getElementsByClassName('first_value')[0].value;
+            var second_value = document.getElementsByClassName('second_value')[0].value;
+            var fors = document.getElementById('dd');
+
+            console.log(first_value);
+            console.log(second_value);
+
+
+        }
+
+
+        function FullName(firstname,lastname){
+            return firstname+" "+lastname;
+        }
+
+        var fullName = FullName("Akbar","Abbas");
+        document.getElementById("demo").innerHTML = fullName;
+    </script>
+</body>
+</html>
